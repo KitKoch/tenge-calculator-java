@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class TengeCalculator {
+public final class TengeCalculator {
+    private TengeCalculator() {}
 
     private static final int[] VALUES = { 20_000, 10_000, 5_000, 2_000, 1_000, 500,
             200, 100, 50, 20, 10, 5, 2, 1 };
