@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public final class TengeCalculator {
-    private TengeCalculator() {}
+
+    private TengeCalculator(){}
 
     private static final int[] VALUES = { 20_000, 10_000, 5_000, 2_000, 1_000, 500,
             200, 100, 50, 20, 10, 5, 2, 1 };
@@ -19,7 +20,7 @@ public final class TengeCalculator {
         }
     }
 
-    private static long userPrompt(Scanner input, String msg) {
+    private static long userLongPositive(Scanner input, String msg) {
         while (true) {
             System.out.print(msg);
             if(input.hasNextLong()) {
@@ -38,7 +39,7 @@ public final class TengeCalculator {
 
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
-            long remainingTenge = userPrompt(input, "Enter tenge amount: ");
+            long remainingTenge = userLongPositive(input, "Enter tenge amount: ");
             System.out.println(remainingTenge + " tenge consists of: ");
             tengeBreakdown(remainingTenge);
         }
